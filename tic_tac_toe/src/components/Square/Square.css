@@ -1,0 +1,31 @@
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: var(--kavia-dark);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.square:hover:not(:disabled) {
+  background-color: rgba(232, 122, 65, 0.1); /* Kavia orange with low opacity */
+}
+
+.square:disabled {
+  cursor: default;
+}
+
+.square.filled {
+  cursor: not-allowed;
+}
+
+.square.winning {
+  background-color: rgba(232, 122, 65, 0.3); /* Kavia orange with medium opacity */
+  color: var(--kavia-orange);
+}
